@@ -6,5 +6,7 @@
 <!ELEMENT ingredientes (ingrediente+)>
 <!ELEMENT ingrediente (#PCDATA)>
 <!ELEMENT preco (#PCDATA)>
+<!ATTLIST preco moeda (BRL | USD) "BRL">
 <!ELEMENT calorias (#PCDATA)>
 <!ELEMENT tempoPreparo (#PCDATA)>
+<!ENTITY reais "R$">

@@ -13,7 +13,7 @@
             <ingrediente>Alho</ingrediente>
             <ingrediente>Etc</ingrediente>
         </ingredientes>
-        <preco>R$ 10.00</preco>
+        <preco moeda="BRL">&reais; 10.00</preco>
         <calorias>200 kcal</calorias>
         <tempoPreparo>40 minutos</tempoPreparo>
     </prato>
@@ -30,7 +30,7 @@
             <ingrediente>Alho</ingrediente>
             <ingrediente>Etc</ingrediente>
         </ingredientes>
-        <preco>R$ 25.00</preco>
+        <preco moeda="BRL">&reais; 25.00</preco>
         <calorias>500 kcal</calorias>
         <tempoPreparo>120 minutos</tempoPreparo>
     </prato>
@@ -45,7 +45,7 @@
             <ingrediente>Molho Caesar</ingrediente>
             <ingrediente>Etc</ingrediente>
         </ingredientes>
-        <preco>R$ 15.00</preco>
+        <preco moeda="BRL">&reais; 15.00</preco>
         <calorias>250 kcal</calorias>
         <tempoPreparo>20 minutos</tempoPreparo>
     </prato>
@@ -61,7 +61,7 @@
             <ingrediente>Pimenta preta</ingrediente>
             <ingrediente>Etc</ingrediente>
         </ingredientes>
-        <preco>R$ 20.00</preco>
+        <preco moeda="BRL">&reais; 20.00</preco>
         <calorias>400 kcal</calorias>
         <tempoPreparo>30 minutos</tempoPreparo>
     </prato>
@@ -77,7 +77,7 @@
             <ingrediente>Wasabi</ingrediente>
             <ingrediente>Etc</ingrediente>
         </ingredientes>
-        <preco>R$ 30.00</preco>
+        <preco moeda="BRL">&reais; 30.00</preco>
         <calorias>350 kcal</calorias>
         <tempoPreparo>45 minutos</tempoPreparo>
     </prato>

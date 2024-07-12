@@ -38,7 +38,7 @@
     </detalhedoprato>
 
     <detalhedoprato id="dp05">
-        <nome>Sushi Combo</nome>
+        <nome>Sushi Combo </nome>
         <descricao>Seleção variada de sushis e sashimis, acompanhados de molho de soja e wasabi</descricao>
         <ingredientes>Arroz de sushi, peixes variados, nori, molho de soja, wasabi, etc</ingredientes>
         <preço>30 reais</preço>

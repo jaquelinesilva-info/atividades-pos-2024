@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE imobiliaria [
+    <!ELEMENT imobiliaria (imovel+)>
+    <!ELEMENT imovel (descricao, proprietario, endereco, caracteristicas, valor)>
+    <!ELEMENT descricao (#PCDATA)>
+    <!ELEMENT proprietario (nome, (email | telefone)+)>
+    <!ELEMENT nome (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT telefone (#PCDATA)>
+    <!ELEMENT endereco (rua, bairro, cidade, numero?)>
+    <!ELEMENT rua (#PCDATA)>
+    <!ELEMENT bairro (#PCDATA)>
+    <!ELEMENT cidade (#PCDATA)>
+    <!ELEMENT numero (#PCDATA)>
+    <!ELEMENT caracteristicas (tamanho, numQuartos, numBanheiros)>
+    <!ELEMENT tamanho (#PCDATA)>
+    <!ELEMENT numQuartos (#PCDATA)>
+    <!ELEMENT numBanheiros (#PCDATA)>
+    <!ELEMENT valor (#PCDATA)>
+]>
+
+<imobiliaria>
+    <imovel>
+        <descricao>Apartamento no centro da cidade</descricao>
+        <proprietario>
+            <nome> Jaqueline Silva</nome>
+            <email>jaqueline.silva@example.com</email>
+            <telefone>912345678</telefone>
+            <telefone>987654321</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua das Flores</rua>
+            <bairro>Centro</bairro>
+            <cidade>Lisboa</cidade>
+            <numero>777</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>120m2</tamanho>
+            <numQuartos>3</numQuartos>
+            <numBanheiros>2</numBanheiros>
+        </caracteristicas>
+        <valor>300000</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Casa com jardim e piscina</descricao>
+        <proprietario>
+            <nome>Mariana Oliveira</nome>
+            <telefone>935678910</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Avenida do Mar</rua>
+            <bairro>Bairro Novo</bairro>
+            <cidade>Porto</cidade>
+        </endereco>
+        <caracteristicas>
+            <tamanho>250m2</tamanho>
+            <numQuartos>4</numQuartos>
+            <numBanheiros>3</numBanheiros>
+        </caracteristicas>
+        <valor>500000</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Apartamento com vista para o rio</descricao>
+        <proprietario>
+            <nome>Rosalia Pereira</nome>
+            <email>rosalia.pereira@example.com</email>
+        </proprietario>
+        <endereco>
+            <rua>Rua do Rio</rua>
+            <bairro>Ribeira</bairro>
+            <cidade>Lisboa</cidade>
+            <numero>45</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>90m2</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor>200000</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Moradia Térrea com Quintal</descricao>
+        <proprietario>
+            <nome>Ana Sousa</nome>
+            <email>ana.sousa@example.com</email>
+            <telefone>962345678</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Travessa da Liberdade</rua>
+            <bairro>Vila Nova</bairro>
+            <cidade>Braga</cidade>
+            <numero>89</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>180m2</tamanho>
+            <numQuartos>3</numQuartos>
+            <numBanheiros>2</numBanheiros>
+        </caracteristicas>
+        <valor>350000</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Estúdio compacto no centro</descricao>
+        <proprietario>
+            <nome>Diego Dias</nome>
+            <telefone>923456789</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua da Alegria</rua>
+            <bairro>Centro</bairro>
+            <cidade>Lisboa</cidade>
+        </endereco>
+        <caracteristicas>
+            <tamanho>45m2</tamanho>
+            <numQuartos>1</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor>150000</valor>
+    </imovel>
+</imobiliaria>

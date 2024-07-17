@@ -17,12 +17,12 @@ Esse é o repositório base para as tarefas da disciplina de POS.
 - Faça o *commit* (a mensagem obviamente deve citar o que foi feito)
 - Faça o *push* para o Github.
 
-**Prazo**: 03/04/2024
+**Prazo**: 19/07/2024
 
 ---
 ## Tarefa 02 - DTD
 - Dentro do diretório `xml` faça as tarefas dos slides 13, 14 e 15 da aula 06 [link](https://dvcirilo.github.io/pos-ifrn/build/aula06.html#13)
 - Utilize os nomes de arquivos sugeridos na tarefa.
-- Commit/Push
+- Commit/Push 
 
-**Prazo**: 10/04/2024
+**Prazo**: 19/07/2024

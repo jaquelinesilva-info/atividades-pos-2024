@@ -12,4 +12,4 @@
             <!ELEMENT pontuação (#PCDATA)>
             <!ELEMENT alternativas (alternativa+)>
                 <!ELEMENT alternativa (#PCDATA)>
-                    <!ATTLIST alternativa correta (sim|nao) #REQUIRED>
+                    <!ATTLIST alternativa correta (sim|nao) #REQUIRED> 

@@ -1,0 +1,112 @@
+{
+    "cardapio": {
+      "prato": [
+        {
+          "id": "dp01",
+          "nome": "Cuzcuz com frango",
+          "descricao": "Cuzcuz nordestino, com frango e molho de ketchup",
+          "ingredientes": {
+            "ingrediente": [
+              "Flocão",
+              "Peito de frango",
+              "Molho de tomate",
+              "Cebola",
+              "Alho",
+              "Etc"
+            ]
+          },
+          "preco": {
+            "moeda": "BRL",
+            "valor": "10.00"
+          },
+          "calorias": "200 kcal",
+          "tempoPreparo": "40 minutos"
+        },
+        {
+          "id": "dp02",
+          "nome": "Feijoada",
+          "descricao": "Prato típico brasileiro com feijão preto, carne de porco, linguiça e bacon",
+          "ingredientes": {
+            "ingrediente": [
+              "Feijão preto",
+              "Carne de porco",
+              "Linguiça",
+              "Bacon",
+              "Cebola",
+              "Alho",
+              "Etc"
+            ]
+          },
+          "preco": {
+            "moeda": "BRL",
+            "valor": "25.00"
+          },
+          "calorias": "500 kcal",
+          "tempoPreparo": "120 minutos"
+        },
+        {
+          "id": "dp03",
+          "nome": "Salada Caesar",
+          "descricao": "Salada clássica com alface romana, croutons, parmesão e molho Caesar",
+          "ingredientes": {
+            "ingrediente": [
+              "Alface romana",
+              "Croutons",
+              "Queijo parmesão",
+              "Molho Caesar",
+              "Etc"
+            ]
+          },
+          "preco": {
+            "moeda": "BRL",
+            "valor": "15.00"
+          },
+          "calorias": "250 kcal",
+          "tempoPreparo": "20 minutos"
+        },
+        {
+          "id": "dp04",
+          "nome": "Massa Carbonara",
+          "descricao": "Massa italiana com molho à base de ovos, queijo parmesão, pancetta e pimenta preta",
+          "ingredientes": {
+            "ingrediente": [
+              "Massa tipo spaghetti",
+              "Ovos",
+              "Queijo parmesão",
+              "Pancetta",
+              "Pimenta preta",
+              "Etc"
+            ]
+          },
+          "preco": {
+            "moeda": "BRL",
+            "valor": "20.00"
+          },
+          "calorias": "400 kcal",
+          "tempoPreparo": "30 minutos"
+        },
+        {
+          "id": "dp05",
+          "nome": "Sushi Combo",
+          "descricao": "Seleção variada de sushis e sashimis, acompanhados de molho de soja e wasabi",
+          "ingredientes": {
+            "ingrediente": [
+              "Arroz de sushi",
+              "Peixes variados",
+              "Nori",
+              "Molho de soja",
+              "Wasabi",
+              "Etc"
+            ]
+          },
+          "preco": {
+            "moeda": "BRL",
+            "valor": "30.00"
+          },
+          "calorias": "350 kcal",
+          "tempoPreparo": "45 minutos"
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,113 @@
+{
+    "imobiliaria": {
+      "imovel": [
+        {
+          "descricao": "Apartamento no centro da cidade",
+          "proprietario": {
+            "nome": "Jaqueline Silva",
+            "contato": [
+              {"email": "jaqueline.silva@example.com"},
+              {"telefone": "912345678"},
+              {"telefone": "987654321"}
+            ]
+          },
+          "endereco": {
+            "rua": "Rua das Flores",
+            "bairro": "Centro",
+            "cidade": "Lisboa",
+            "numero": "777"
+          },
+          "caracteristicas": {
+            "tamanho": "120m2",
+            "numQuartos": "3",
+            "numBanheiros": "2"
+          },
+          "valor": "300000"
+        },
+        {
+          "descricao": "Casa com jardim e piscina",
+          "proprietario": {
+            "nome": "Mariana Oliveira",
+            "contato": [
+              {"telefone": "935678910"}
+            ]
+          },
+          "endereco": {
+            "rua": "Avenida do Mar",
+            "bairro": "Bairro Novo",
+            "cidade": "Porto"
+          },
+          "caracteristicas": {
+            "tamanho": "250m2",
+            "numQuartos": "4",
+            "numBanheiros": "3"
+          },
+          "valor": "500000"
+        },
+        {
+          "descricao": "Apartamento com vista para o rio",
+          "proprietario": {
+            "nome": "Rosalia Pereira",
+            "contato": [
+              {"email": "rosalia.pereira@example.com"}
+            ]
+          },
+          "endereco": {
+            "rua": "Rua do Rio",
+            "bairro": "Ribeira",
+            "cidade": "Lisboa",
+            "numero": "45"
+          },
+          "caracteristicas": {
+            "tamanho": "90m2",
+            "numQuartos": "2",
+            "numBanheiros": "1"
+          },
+          "valor": "200000"
+        },
+        {
+          "descricao": "Moradia Térrea com Quintal",
+          "proprietario": {
+            "nome": "Ana Sousa",
+            "contato": [
+              {"email": "ana.sousa@example.com"},
+              {"telefone": "962345678"}
+            ]
+          },
+          "endereco": {
+            "rua": "Travessa da Liberdade",
+            "bairro": "Vila Nova",
+            "cidade": "Braga",
+            "numero": "89"
+          },
+          "caracteristicas": {
+            "tamanho": "180m2",
+            "numQuartos": "3",
+            "numBanheiros": "2"
+          },
+          "valor": "350000"
+        },
+        {
+          "descricao": "Estúdio compacto no centro",
+          "proprietario": {
+            "nome": "Diego Dias",
+            "contato": [
+              {"telefone": "923456789"}
+            ]
+          },
+          "endereco": {
+            "rua": "Rua da Alegria",
+            "bairro": "Centro",
+            "cidade": "Lisboa"
+          },
+          "caracteristicas": {
+            "tamanho": "45m2",
+            "numQuartos": "1",
+            "numBanheiros": "1"
+          },
+          "valor": "150000"
+        }
+      ]
+    }
+  }
+  

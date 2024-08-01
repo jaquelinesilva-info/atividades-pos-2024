@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cardapio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cardapio.xsd">
+    <prato id="1">
+        <nome>Cuzcuz com frango</nome>
+        <descricao>Cuzcuz nordestino, com frango e molho de ketchup</descricao>
+        <ingredientes>
+            <ingrediente>Flocão</ingrediente>
+            <ingrediente>Peito de frango</ingrediente>
+            <ingrediente>Molho de tomate</ingrediente>
+            <ingrediente>Cebola</ingrediente>
+            <ingrediente>Alho</ingrediente>
+            <ingrediente>Etc</ingrediente>
+        </ingredientes>
+        <preco>&reais; 10.00</preco>
+        <calorias>200 kcal</calorias>
+        <tempoPreparo>40 minutos</tempoPreparo>
+    </prato>
+
+    <prato id="2">
+        <nome>Feijoada</nome>
+        <descricao>Prato típico brasileiro com feijão preto, carne de porco, linguiça e bacon</descricao>
+        <ingredientes>
+            <ingrediente>Feijão preto</ingrediente>
+            <ingrediente>Carne de porco</ingrediente>
+            <ingrediente>Linguiça</ingrediente>
+            <ingrediente>Bacon</ingrediente>
+            <ingrediente>Cebola</ingrediente>
+            <ingrediente>Alho</ingrediente>
+            <ingrediente>Etc</ingrediente>
+        </ingredientes>
+        <preco>&reais; 25.00</preco>
+        <calorias>500 kcal</calorias>
+        <tempoPreparo>120 minutos</tempoPreparo>
+    </prato>
+
+    <prato id="3">
+        <nome>Salada Caesar</nome>
+        <descricao>Salada clássica com alface romana, croutons, parmesão e molho Caesar</descricao>
+        <ingredientes>
+            <ingrediente>Alface romana</ingrediente>
+            <ingrediente>Croutons</ingrediente>
+            <ingrediente>Queijo parmesão</ingrediente>
+            <ingrediente>Molho Caesar</ingrediente>
+            <ingrediente>Etc</ingrediente>
+        </ingredientes>
+        <preco>&reais; 15.00</preco>
+        <calorias>250 kcal</calorias>
+        <tempoPreparo>20 minutos</tempoPreparo>
+    </prato>
+
+    <prato id="4">
+        <nome>Massa Carbonara</nome>
+        <descricao>Massa italiana com molho à base de ovos, queijo parmesão, pancetta e pimenta preta</descricao>
+        <ingredientes>
+            <ingrediente>Massa tipo spaghetti</ingrediente>
+            <ingrediente>Ovos</ingrediente>
+            <ingrediente>Queijo parmesão</ingrediente>
+            <ingrediente>Pancetta</ingrediente>
+            <ingrediente>Pimenta preta</ingrediente>
+            <ingrediente>Etc</ingrediente>
+        </ingredientes>
+        <preco>&reais; 20.00</preco>
+        <calorias>400 kcal</calorias>
+        <tempoPreparo>30 minutos</tempoPreparo>
+    </prato>
+
+    <prato id="5">
+        <nome>Sushi Combo</nome>
+        <descricao>Seleção variada de sushis e sashimis, acompanhados de molho de soja e wasabi</descricao>
+        <ingredientes>
+            <ingrediente>Arroz de sushi</ingrediente>
+            <ingrediente>Peixes variados</ingrediente>
+            <ingrediente>Nori</ingrediente>
+            <ingrediente>Molho de soja</ingrediente>
+            <ingrediente>Wasabi</ingrediente>
+            <ingrediente>Etc</ingrediente>
+        </ingredientes>
+        <preco>&reais; 30.00</preco>
+        <calorias>350 kcal</calorias>
+        <tempoPreparo>45 minutos</tempoPreparo>
+    </prato>
+</cardapio>

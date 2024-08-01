@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="imobiliaria">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="imovel" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="descricao" type="xs:string"/>
+                            <xs:element name="proprietario">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nome" type="xs:string"/>
+                                        <xs:choice maxOccurs="unbounded">
+                                            <xs:element name="email" type="xs:string"/>
+                                            <xs:element name="telefone" type="xs:string"/>
+                                        </xs:choice>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="endereco">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="rua" type="xs:string"/>
+                                        <xs:element name="bairro" type="xs:string"/>
+                                        <xs:element name="cidade" type="xs:string"/>
+                                        <xs:element name="numero" type="xs:integer" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="caracteristicas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tamanho" type="xs:decimal"/>
+                                        <xs:element name="numQuartos" type="xs:integer"/>
+                                        <xs:element name="numBanheiros" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="valor" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

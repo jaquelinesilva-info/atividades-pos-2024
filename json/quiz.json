@@ -1,0 +1,77 @@
+{
+    "quiz": {
+      "versao": "1.0",
+      "disciplina": "Matemática",
+      "professor": {
+        "nome": "João Silva",
+        "matricula": "12345"
+      },
+      "turma": "8º Ano",
+      "data": "2024-07-17",
+      "questoes": {
+        "questao": [
+          {
+            "enunciado": "Qual é o valor de 28 + 2?",
+            "pontuacao": "0",
+            "alternativas": {
+              "alternativa": [
+                {"correta": "sim", "valor": "30"},
+                {"correta": "nao", "valor": "282"},
+                {"correta": "nao", "valor": "20"},
+                {"correta": "nao", "valor": "7"}
+              ]
+            }
+          },
+          {
+            "enunciado": "Qual é a capital do Brasil?",
+            "pontuacao": "10",
+            "alternativas": {
+              "alternativa": [
+                {"correta": "sim", "valor": "Brasilia"},
+                {"correta": "nao", "valor": "Porto"},
+                {"correta": "nao", "valor": "Braga"},
+                {"correta": "nao", "valor": "Coimbra"}
+              ]
+            }
+          },
+          {
+            "enunciado": "Quantos continentes existem na Terra?",
+            "pontuacao": "10",
+            "alternativas": {
+              "alternativa": [
+                {"correta": "sim", "valor": "7"},
+                {"correta": "nao", "valor": "5"},
+                {"correta": "nao", "valor": "6"},
+                {"correta": "nao", "valor": "8"}
+              ]
+            }
+          },
+          {
+            "enunciado": "Qual é o maior oceano do mundo?",
+            "pontuacao": "10",
+            "alternativas": {
+              "alternativa": [
+                {"correta": "sim", "valor": "Oceano Pacífico"},
+                {"correta": "nao", "valor": "Oceano Atlântico"},
+                {"correta": "nao", "valor": "Oceano Índico"},
+                {"correta": "nao", "valor": "Oceano Ártico"}
+              ]
+            }
+          },
+          {
+            "enunciado": "Quem escreveu 'Os Lusíadas'?",
+            "pontuacao": "10",
+            "alternativas": {
+              "alternativa": [
+                {"correta": "sim", "valor": "Luís de Camões"},
+                {"correta": "nao", "valor": "Fernando Pessoa"},
+                {"correta": "nao", "valor": "José Saramago"},
+                {"correta": "nao", "valor": "Eça de Queirós"}
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+  

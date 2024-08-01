@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="cardapio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="prato" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nome" type="xs:string"/>
+                            <xs:element name="descricao" type="xs:string"/>
+                            <xs:element name="ingredientes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ingrediente" type="xs:string" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="preco" type="xs:string"/>
+                            <xs:element name="calorias" type="xs:string"/>
+                            <xs:element name="tempoPreparo" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:integer" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="precoType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\&reais; \d+(\.\d{2})?"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="caloriasType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d+ kcal"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

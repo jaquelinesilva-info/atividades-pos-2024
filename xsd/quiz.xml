@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quiz SYSTEM "quiz.dtd">
+<quiz versao="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quiz.xsd">
+    <disciplina>Matemática</disciplina>
+    <professor>
+        <nome>João Silva</nome>
+        <matrícula>12345</matrícula>
+    </professor>
+    <turma>8º Ano</turma>
+    <data>2024-07-17</data>
+    <questões>
+        <questão>
+            <enunciado>Qual é o valor de 28 + 2?</enunciado>
+            <pontuação>0</pontuação>
+            <alternativas>
+                <alternativa correta="sim">30</alternativa>
+                <alternativa correta="nao">282</alternativa>
+                <alternativa correta="nao">20</alternativa>
+                <alternativa correta="nao">7</alternativa>
+            </alternativas>
+        </questão>
+        <questão>
+            <enunciado>Qual é a capital do Brasil?</enunciado>
+            <pontuação>10</pontuação>
+            <alternativas>
+                <alternativa correta="sim">Brasilia</alternativa>
+                <alternativa correta="nao">Porto</alternativa>
+                <alternativa correta="nao">Braga</alternativa>
+                <alternativa correta="nao">Coimbra</alternativa>
+            </alternativas>
+        </questão>
+        <questão>
+            <enunciado>Quantos continentes existem na Terra?</enunciado>
+            <pontuação>10</pontuação>
+            <alternativas>
+                <alternativa correta="sim">7</alternativa>
+                <alternativa correta="nao">5</alternativa>
+                <alternativa correta="nao">6</alternativa>
+                <alternativa correta="nao">8</alternativa>
+            </alternativas>
+        </questão>
+        <questão>
+            <enunciado>Qual é o maior oceano do mundo?</enunciado>
+            <pontuação>10</pontuação>
+            <alternativas>
+                <alternativa correta="sim">Oceano Pacífico</alternativa>
+                <alternativa correta="nao">Oceano Atlântico</alternativa>
+                <alternativa correta="nao">Oceano Índico</alternativa>
+                <alternativa correta="nao">Oceano Ártico</alternativa>
+            </alternativas>
+        </questão>
+        <questão>
+            <enunciado>Quem escreveu "Os Lusíadas"?</enunciado>
+            <pontuação>10</pontuação>
+            <alternativas>
+                <alternativa correta="sim">Luís de Camões</alternativa>
+                <alternativa correta="nao">Fernando Pessoa</alternativa>
+                <alternativa correta="nao">José Saramago</alternativa>
+                <alternativa correta="nao">Eça de Queirós</alternativa>
+            </alternativas>
+        </questão>
+    </questões>
+</quiz>

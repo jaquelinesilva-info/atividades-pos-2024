@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="quiz">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="disciplina" type="xs:string"/>
+                <xs:element name="professor">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nome" type="xs:string"/>
+                            <xs:element name="matrícula" type="xs:string" minOccurs="0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="turma" type="xs:string"/>
+                <xs:element name="data" type="xs:string"/>
+                <xs:element name="questões">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="questão" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="enunciado" type="xs:string"/>
+                                        <xs:element name="pontuação" type="xs:string"/>
+                                        <xs:element name="alternativas">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="alternativa" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute name="correta" type="corretaType" use="required"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="versao" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="corretaType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="sim"/>
+            <xs:enumeration value="nao"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

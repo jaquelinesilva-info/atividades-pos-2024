@@ -2,7 +2,7 @@
 <!DOCTYPE cardapio SYSTEM "definicoes.dtd">
 
 <cardapio>
-    <prato id="dp01">
+    <prato id="p01">
         <nome>Cuzcuz com frango</nome>
         <descricao>Cuzcuz nordestino, com frango e molho de ketchup</descricao>
         <ingredientes>
@@ -18,7 +18,7 @@
         <tempoPreparo>40 minutos</tempoPreparo>
     </prato>
 
-    <prato id="dp02">
+    <prato id="p02">
         <nome>Feijoada</nome>
         <descricao>Prato típico brasileiro com feijão preto, carne de porco, linguiça e bacon</descricao>
         <ingredientes>
@@ -35,7 +35,7 @@
         <tempoPreparo>120 minutos</tempoPreparo>
     </prato>
 
-    <prato id="dp03">
+    <prato id="p03">
         <nome>Salada Caesar</nome>
         <descricao>Salada clássica com alface romana, croutons, parmesão e molho Caesar</descricao>
         <ingredientes>
@@ -50,7 +50,7 @@
         <tempoPreparo>20 minutos</tempoPreparo>
     </prato>
 
-    <prato id="dp04">
+    <prato id="p04">
         <nome>Massa Carbonara</nome>
         <descricao>Massa italiana com molho à base de ovos, queijo parmesão, pancetta e pimenta preta</descricao>
         <ingredientes>
@@ -66,7 +66,7 @@
         <tempoPreparo>30 minutos</tempoPreparo>
     </prato>
 
-    <prato id="dp05">
+    <prato id="p05">
         <nome>Sushi Combo</nome>
         <descricao>Seleção variada de sushis e sashimis, acompanhados de molho de soja e wasabi</descricao>
         <ingredientes>

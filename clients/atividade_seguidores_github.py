@@ -1,6 +1,9 @@
 import requests
 from getpass import getpass
 
+
+# obs: para realizar essa atividade precisa-se do token do github
+
 api_url = "https://api.github.com/"
 
 username = input("Nome de usuário do GitHub: ")
@@ -27,7 +30,7 @@ def listar_seguidores():
             print(seguidor["login"])
         return [seguidor["login"] for seguidor in seguidores]
     else:
-        print(f"Falha ao recuperar seguidores: {response.status_code}")
+        print(f"Falha ao recuperar seguidores {response.status_code}")
         return []
 
 
@@ -38,7 +41,7 @@ def verifica_segue_usuario(usuario):
     elif response.status_code == 404:
         return False
     else:
-        print(f"Erro ao verificar o status de seguir: {response.status_code}")
+        print(f"Erro ao verificar o status de seguir {response.status_code}")
         return False
 
 
@@ -49,7 +52,7 @@ def seguir_usuario(usuario_para_seguir):
     
     response = requests.put(f"{api_url}user/following/{usuario_para_seguir}", headers=headers)
     if response.status_code == 204:
-        print(f"Agora você está seguindo {usuario_para_seguir}")
+        print(f" você está seguindo {usuario_para_seguir}")
     else:
         print(f"Falha ao seguir {usuario_para_seguir}: {response.status_code}")
 

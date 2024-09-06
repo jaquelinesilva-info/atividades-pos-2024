@@ -47,6 +47,9 @@ def buscar_boletim(ano, periodo):
         print(f"Erro ao acessar o boletim: {resposta.status_code}")
         return None
 
+
+# aqui basicamente é responsável por converter os dados do boletim (no formato JSON) para uma tabela formatada com a biblioteca tabulate
+
 def exibir_boletim(dados_boletim):
     if not dados_boletim:
         print("Boletim não encontrado. ")

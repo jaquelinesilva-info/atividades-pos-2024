@@ -2,8 +2,8 @@ import requests
 from tabulate import tabulate
 from getpass import getpass
 
-matricula = input("Informe sua Matrícula: ")
-senha = getpass("Informe sua Senha: ")
+matricula = input("Digite sua matrícula: ")
+senha = getpass("Digite sua senha: ")
 
 url_autenticacao = "https://suap.ifrn.edu.br/api/v2/autenticacao/token/"
 autenticacao_resposta = requests.post(url_autenticacao, data={"username": matricula, "password": senha})
@@ -51,7 +51,6 @@ def exibir_boletim(dados_boletim):
     if not dados_boletim:
         print("Boletim não encontrado. ")
         return
-    
     tabela = []
     for disciplina in dados_boletim:
         tabela.append([
@@ -62,7 +61,6 @@ def exibir_boletim(dados_boletim):
             disciplina.get("nota_etapa_4", "-"),
             disciplina.get("media_disciplina", "-")
         ])
-    
     print(tabulate(tabela, headers=["Disciplina", " NOTA 1", "NOTA 2", "NOTA 3", "NOTA 4", "MÉDIA"], tablefmt="fancy_grid"))
 
 ano = int(input("Ano Letivo: "))

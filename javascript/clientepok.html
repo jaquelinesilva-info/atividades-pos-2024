@@ -68,7 +68,7 @@
         let currentPage = 1;
         const limit = 12;
 
-        // Carregar Pokémon na inicialização
+        // carregar pokémon na inicialização
         loadPokemon(currentPage);
 
         async function loadPokemon(page = 1) {
@@ -97,11 +97,11 @@
 
                     pokemonCards.appendChild(card);
 
-                    // Carrega a imagem do Pokémon para cada card
+                    // carrega a imagem do Pokémon para cada card
                     loadPokemonImage(pokemon.url, index);
                 });
 
-                // Mostrar controles de paginação após carregar os Pokémon
+                // mostra controles de paginação após carregar os Pokémon
                 document.getElementById('pagination-controls').style.display = 'flex';
                 document.getElementById('prev-page-btn').style.display = page > 1 ? 'block' : 'none';
 

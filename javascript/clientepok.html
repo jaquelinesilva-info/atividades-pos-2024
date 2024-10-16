@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pokémon - PokeAPI</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .btn-custom {
+            background-color: #ff0084;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #e60074;
+            color: #fff;
+        }
+
+        /* Adicionando estilo para o destaque da div do Pokémon */
+        .pokemon-card:hover {
+            transform: scale(1.05); /* Aumenta o tamanho */
+            transition: transform 0.2s; /* Animação suave */
+            box-shadow: 0 0 20px rgba(255, 0, 132, 0.5); /* Sombra ao redor */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Lista de Pokémon</h1>
+
+        <!-- Cards para a lista de Pokémon -->
+        <div class="row" id="pokemon-cards"></div>
+
+        <!-- Paginação -->
+        <div class="d-flex justify-content-center mt-4" id="pagination-controls" style="display: none;">
+            <button id="prev-page-btn" class="btn btn-custom mx-2" onclick="prevPage()">Anterior</button>
+            <button id="next-page-btn" class="btn btn-custom mx-2" onclick="nextPage()">Próximo</button>
+        </div>
+    </div>
+
+    <!-- Modal para exibir detalhes do Pokémon -->
+    <div class="modal fade" id="pokemonModal" tabindex="-1" aria-labelledby="pokemonModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pokemonModalLabel">Detalhes do Pokémon</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-content">
+                    Carregando detalhes...
+                </div>
+                <!-- Botões de navegação centralizados na parte inferior do modal -->
+                <div class="modal-footer justify-content-center">
+                    <button id="prev-page-btn-modal" class="btn btn-custom" onclick="prevPage()" style="display: none;">Anterior</button>
+                    <button id="next-page-btn-modal" class="btn btn-custom" onclick="nextPage()">Próximo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let currentPage = 1;
+        const limit = 12;
+
+        // Carregar Pokémon na inicialização
+        loadPokemon(currentPage);
+
+        async function loadPokemon(page = 1) {
+            try {
+                const offset = (page - 1) * limit;
+                const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
+                const response = await fetch(url);
+                const data = await response.json();
+
+                const pokemonCards = document.getElementById('pokemon-cards');
+                pokemonCards.innerHTML = '';
+
+                data.results.forEach((pokemon, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'col-md-4 mb-4';
+
+                    card.innerHTML = `
+                        <div class="card h-100 shadow-sm pokemon-card"> <!-- Adicionando a classe pokemon-card -->
+                            <div class="card-body text-center">
+                                <h5 class="card-title">${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h5>
+                                <img id="pokemon-img-${index}" class="img-fluid mb-3" alt="${pokemon.name}" style="height: 150px; object-fit: contain;">
+                                <button class="btn btn-custom" onclick="loadPokemonDetails('${pokemon.url}', '${pokemon.name}')">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    `;
+
+                    pokemonCards.appendChild(card);
+
+                    // Carrega a imagem do Pokémon para cada card
+                    loadPokemonImage(pokemon.url, index);
+                });
+
+                // Mostrar controles de paginação após carregar os Pokémon
+                document.getElementById('pagination-controls').style.display = 'flex';
+                document.getElementById('prev-page-btn').style.display = page > 1 ? 'block' : 'none';
+
+            } catch (error) {
+                console.error('Erro ao buscar os Pokémon:', error);
+                alert('Não foi possível carregar os Pokémon.');
+            }
+        }
+
+        async function loadPokemonImage(pokemonUrl, index) {
+            try {
+                const response = await fetch(pokemonUrl);
+                const pokemon = await response.json();
+                const imgElement = document.getElementById(`pokemon-img-${index}`);
+                imgElement.src = pokemon.sprites.front_default;
+            } catch (error) {
+                console.error('Erro ao carregar a imagem do Pokémon:', error);
+            }
+        }
+
+        async function loadPokemonDetails(pokemonUrl, pokemonName) {
+            try {
+                const response = await fetch(pokemonUrl);
+                const pokemon = await response.json();
+
+                const modalContent = document.getElementById('modal-content');
+                modalContent.innerHTML = `
+                    <div class="text-center mb-3">
+                        <img src="${pokemon.sprites.front_default}" alt="${pokemonName}" class="img-fluid" style="height: 150px; object-fit: contain;">
+                    </div>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Altura</th>
+                                <td>${pokemon.height / 10} m</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Peso</th>
+                                <td>${pokemon.weight / 10} kg</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipos</th>
+                                <td>${pokemon.types.map(type => type.type.name).join(', ')}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                `;
+
+                const pokemonModal = new bootstrap.Modal(document.getElementById('pokemonModal'));
+                pokemonModal.show();
+            } catch (error) {
+                console.error('Erro ao carregar os detalhes do Pokémon:', error);
+                alert('Não foi possível carregar os detalhes do Pokémon.');
+            }
+        }
+
+        function nextPage() {
+            currentPage++;
+            loadPokemon(currentPage);
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                loadPokemon(currentPage);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,24 +1,54 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+// src/main.js
+import { fetchPokemon, fetchPokemonImage, fetchPokemonDetails } from './api/pokeApi.js';
+import { renderPokemonCards, renderPokemonDetails } from './dom/domHandler.js';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+let currentPage = 1;
 
-setupCounter(document.querySelector('#counter'))
+async function loadPokemon(page = 1) {
+    try {
+        const data = await fetchPokemon(page);
+        renderPokemonCards(data, loadPokemonImage, loadPokemonDetails);
+        document.getElementById('prev-page-btn').style.display = page > 1 ? 'block' : 'none';
+    } catch (error) {
+        console.error('Erro ao buscar os Pokémon:', error);
+        alert('Não foi possível carregar os Pokémon.');
+    }
+}
+
+async function loadPokemonImage(pokemonUrl, index) {
+    try {
+        const pokemon = await fetchPokemonImage(pokemonUrl);
+        const imgElement = document.getElementById(`pokemon-img-${index}`);
+        imgElement.src = pokemon.sprites.front_default;
+    } catch (error) {
+        console.error('Erro ao carregar a imagem do Pokémon:', error);
+    }
+}
+
+async function loadPokemonDetails(pokemonUrl, pokemonName) {
+    try {
+        const pokemon = await fetchPokemonDetails(pokemonUrl);
+        renderPokemonDetails(pokemon, pokemonName);
+
+        const pokemonModal = new bootstrap.Modal(document.getElementById('pokemonModal'));
+        pokemonModal.show();
+    } catch (error) {
+        console.error('Erro ao carregar os detalhes do Pokémon:', error);
+        alert('Não foi possível carregar os detalhes do Pokémon.');
+    }
+}
+
+document.getElementById('next-page-btn').addEventListener('click', () => {
+    currentPage++;
+    loadPokemon(currentPage);
+});
+
+document.getElementById('prev-page-btn').addEventListener('click', () => {
+    if (currentPage > 1) {
+        currentPage--;
+        loadPokemon(currentPage);
+    }
+});
+
+// carregar pokémon na inicialização
+loadPokemon(currentPage);
